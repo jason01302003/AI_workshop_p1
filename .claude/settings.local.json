@@ -6,7 +6,9 @@
       "Bash(sam --version)",
       "PowerShell(aws sts get-caller-identity 2>&1)",
       "PowerShell(aws --version 2>&1)",
-      "PowerShell(sam --version 2>&1)"
+      "PowerShell(sam --version 2>&1)",
+      "Bash(git fetch *)",
+      "Bash(git ls-tree *)"
     ]
   }
 }
