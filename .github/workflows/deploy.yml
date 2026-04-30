@@ -4,12 +4,19 @@ on:
   push:
     branches: [main]
     paths: ['project_2/webui/**']
+  workflow_dispatch:   # allow manual trigger from Actions tab
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,13 +31,22 @@ jobs:
         run: cd project_2/webui && npm ci
 
       - name: Build
-        # VITE_WS_ENDPOINT is baked into .env.production; secret overrides it if set
         run: cd project_2/webui && npm run build
         env:
           VITE_WS_ENDPOINT: ${{ secrets.VITE_WS_ENDPOINT || 'wss://hyupn8hi52.execute-api.us-west-2.amazonaws.com/prod' }}
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./project_2/webui/dist
+          path: project_2/webui/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
