@@ -1,0 +1,35 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths: ['project_2/webui/**']
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: project_2/webui/package-lock.json
+
+      - name: Install dependencies
+        run: cd project_2/webui && npm ci
+
+      - name: Build
+        run: cd project_2/webui && npm run build
+        env:
+          VITE_WS_ENDPOINT: ${{ secrets.VITE_WS_ENDPOINT }}
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./project_2/webui/dist
