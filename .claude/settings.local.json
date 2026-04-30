@@ -8,7 +8,10 @@
       "PowerShell(aws --version 2>&1)",
       "PowerShell(sam --version 2>&1)",
       "Bash(git fetch *)",
-      "Bash(git ls-tree *)"
+      "Bash(git ls-tree *)",
+      "Bash(git rebase *)",
+      "Bash(git push *)",
+      "Bash(git stash *)"
     ]
   }
 }
