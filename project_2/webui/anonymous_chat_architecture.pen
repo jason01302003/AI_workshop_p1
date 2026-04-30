@@ -1,0 +1,2368 @@
+{
+  "version": "2.11",
+  "children": [
+    {
+      "type": "frame",
+      "id": "dhVA6",
+      "x": 0,
+      "y": 0,
+      "name": "Desktop - Join Screen",
+      "width": 1440,
+      "height": 900,
+      "fill": [
+        "$bg-primary",
+        {
+          "type": "gradient",
+          "gradientType": "radial",
+          "enabled": true,
+          "opacity": 0.15,
+          "rotation": 0,
+          "size": {
+            "width": 1.2,
+            "height": 1.2
+          },
+          "colors": [
+            {
+              "color": "$accent",
+              "position": 0
+            },
+            {
+              "color": "#00000000",
+              "position": 1
+            }
+          ],
+          "center": {
+            "y": 0.4
+          }
+        }
+      ],
+      "layout": "vertical",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "J8HEn5",
+          "name": "centerWrap",
+          "width": 1440,
+          "height": 900,
+          "fill": {
+            "type": "color",
+            "color": "$bg-primary",
+            "enabled": false
+          },
+          "layout": "vertical",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "VCM7w",
+              "name": "formCard",
+              "width": 420,
+              "fill": "$bg-secondary",
+              "cornerRadius": "$radius-lg",
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "$border"
+              },
+              "layout": "vertical",
+              "padding": [
+                48,
+                40
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "dRVjl",
+                  "name": "chatIcon",
+                  "width": 72,
+                  "height": 72,
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "$accent",
+                        "position": 0
+                      },
+                      {
+                        "color": "#1D4ED8",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "cornerRadius": 20,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#3B82F640",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 24
+                  },
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "QEIHs",
+                      "name": "iconInner",
+                      "width": 36,
+                      "height": 36,
+                      "iconFontName": "message-circle",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FFFFFF"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "hWiHS",
+                  "name": "spacer1",
+                  "width": 1,
+                  "height": 24
+                },
+                {
+                  "type": "text",
+                  "id": "gOmPW",
+                  "name": "title",
+                  "fill": "$text-primary",
+                  "content": "Anonymous Chat",
+                  "textAlign": "center",
+                  "fontFamily": "$font-main",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "EBulf",
+                  "name": "spacer2",
+                  "width": 1,
+                  "height": 8
+                },
+                {
+                  "type": "text",
+                  "id": "j6XszF",
+                  "name": "subtitle",
+                  "fill": "$text-secondary",
+                  "content": "Join the conversation anonymously",
+                  "textAlign": "center",
+                  "fontFamily": "$font-main",
+                  "fontSize": 15
+                },
+                {
+                  "type": "frame",
+                  "id": "ISYZR",
+                  "name": "spacer3",
+                  "width": 1,
+                  "height": 32
+                },
+                {
+                  "type": "frame",
+                  "id": "CAuW5",
+                  "name": "inputGroup",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Ocleq",
+                      "name": "inputLabel",
+                      "fill": "$text-secondary",
+                      "content": "Callsign",
+                      "fontFamily": "$font-main",
+                      "fontSize": 13,
+                      "fontWeight": "600",
+                      "letterSpacing": 0.5
+                    },
+                    {
+                      "type": "frame",
+                      "id": "MrykZ",
+                      "name": "inputField",
+                      "width": "fill_container",
+                      "height": 48,
+                      "fill": "$bg-input",
+                      "cornerRadius": "$radius-sm",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "$border"
+                      },
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "YbIGT",
+                          "name": "inputPlaceholder",
+                          "fill": "$text-muted",
+                          "content": "Enter your callsign...",
+                          "fontFamily": "$font-main",
+                          "fontSize": 15
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "O5XW3",
+                      "name": "validationHint",
+                      "fill": "$text-muted",
+                      "content": "Letters, numbers, and underscores only (max 20 chars)",
+                      "fontFamily": "$font-main",
+                      "fontSize": 12
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mQlTx",
+                  "name": "spacer4",
+                  "width": 1,
+                  "height": 24
+                },
+                {
+                  "type": "frame",
+                  "id": "OsdKJ",
+                  "name": "joinBtn",
+                  "width": "fill_container",
+                  "height": 48,
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "$accent",
+                        "position": 0
+                      },
+                      {
+                        "color": "$accent-hover",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "cornerRadius": "$radius-sm",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#3B82F650",
+                    "offset": {
+                      "x": 0,
+                      "y": 2
+                    },
+                    "blur": 12
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Jo2pR",
+                      "name": "btnText",
+                      "fill": "#FFFFFF",
+                      "content": "Join Chat",
+                      "fontFamily": "$font-main",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vQPEh",
+                  "name": "spacer5",
+                  "width": 1,
+                  "height": 20
+                },
+                {
+                  "type": "frame",
+                  "id": "AT2ym",
+                  "name": "statusRow",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "rxYwh",
+                      "name": "statusDot",
+                      "fill": "$success",
+                      "width": 8,
+                      "height": 8
+                    },
+                    {
+                      "type": "text",
+                      "id": "X59Jdg",
+                      "name": "statusText",
+                      "fill": "$text-muted",
+                      "content": "Connected",
+                      "fontFamily": "$font-main",
+                      "fontSize": 13
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "MOYtT",
+          "name": "form",
+          "width": 420,
+          "fill": "$bg-secondary",
+          "cornerRadius": "$radius-lg",
+          "layout": "vertical",
+          "gap": 28,
+          "padding": [
+            40,
+            36
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "bW97o",
+              "name": "iconWrap",
+              "width": 72,
+              "height": 72,
+              "fill": "$accent",
+              "cornerRadius": "$radius-md",
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "N0IUe",
+                  "name": "chatIcon",
+                  "width": 36,
+                  "height": 36,
+                  "iconFontName": "message-circle",
+                  "iconFontFamily": "lucide",
+                  "fill": "#FFFFFF"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "spniF",
+              "name": "titleGroup",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "qokkP",
+                  "name": "titleText",
+                  "fill": "$text-primary",
+                  "content": "Anonymous Chat",
+                  "textAlign": "center",
+                  "fontFamily": "$font-main",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "EDqPU",
+                  "name": "subtitleText",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Join the conversation anonymously",
+                  "textAlign": "center",
+                  "fontFamily": "$font-main",
+                  "fontSize": 15
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "oanr4",
+              "name": "inputGroup",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "eF93h",
+                  "name": "inputField",
+                  "width": "fill_container",
+                  "height": 48,
+                  "fill": "$bg-input",
+                  "cornerRadius": "$radius-sm",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "$border"
+                  },
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "pRO3R",
+                      "name": "inputPlaceholder",
+                      "fill": "$text-muted",
+                      "content": "Enter your callsign...",
+                      "fontFamily": "$font-main",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "Ay0XR",
+                  "name": "hintText",
+                  "fill": "$text-muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Letters, numbers, and underscores only (max 20 chars)",
+                  "fontFamily": "$font-main",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "e1zMr",
+              "name": "joinBtn",
+              "width": "fill_container",
+              "height": 48,
+              "fill": "$accent",
+              "cornerRadius": "$radius-sm",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "bNVvB",
+                  "name": "joinBtnText",
+                  "fill": "#FFFFFF",
+                  "content": "Join Chat",
+                  "fontFamily": "$font-main",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ObaXR",
+              "name": "statusRow",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "jr7oP",
+                  "name": "statusDot",
+                  "fill": "$success",
+                  "width": 8,
+                  "height": 8
+                },
+                {
+                  "type": "text",
+                  "id": "pr2Zj",
+                  "name": "statusLabel",
+                  "fill": "$text-muted",
+                  "content": "Connected",
+                  "fontFamily": "$font-main",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "BMzOT",
+      "x": 1540,
+      "y": 0,
+      "name": "Mobile - Join Screen",
+      "width": 390,
+      "height": 844,
+      "fill": [
+        "$bg-primary",
+        {
+          "type": "gradient",
+          "gradientType": "radial",
+          "enabled": true,
+          "opacity": 0.12,
+          "rotation": 0,
+          "size": {
+            "width": 1.5,
+            "height": 1.5
+          },
+          "colors": [
+            {
+              "color": "$accent",
+              "position": 0
+            },
+            {
+              "color": "#00000000",
+              "position": 1
+            }
+          ],
+          "center": {
+            "y": 0.35
+          }
+        }
+      ],
+      "layout": "vertical",
+      "padding": [
+        0,
+        20
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "y4DOKN",
+          "name": "mobileWrap",
+          "width": 390,
+          "height": 844,
+          "fill": {
+            "type": "color",
+            "color": "$bg-primary",
+            "enabled": false
+          },
+          "layout": "vertical",
+          "padding": [
+            0,
+            20
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "PIVCb",
+              "name": "mFormCard",
+              "width": "fill_container",
+              "fill": "$bg-secondary",
+              "cornerRadius": "$radius-lg",
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "$border"
+              },
+              "layout": "vertical",
+              "padding": [
+                40,
+                24
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "I4KSY9",
+                  "name": "mIcon",
+                  "width": 64,
+                  "height": 64,
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "$accent",
+                        "position": 0
+                      },
+                      {
+                        "color": "#1D4ED8",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "cornerRadius": 18,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#3B82F640",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 20
+                  },
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "NcUlx",
+                      "name": "mIconInner",
+                      "width": 32,
+                      "height": 32,
+                      "iconFontName": "message-circle",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FFFFFF"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "FO2nB",
+                  "name": "mSp1",
+                  "width": 1,
+                  "height": 20
+                },
+                {
+                  "type": "text",
+                  "id": "ULgXy",
+                  "name": "mTitle",
+                  "fill": "$text-primary",
+                  "content": "Anonymous Chat",
+                  "textAlign": "center",
+                  "fontFamily": "$font-main",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "K9MtWK",
+                  "name": "mSp2",
+                  "width": 1,
+                  "height": 6
+                },
+                {
+                  "type": "text",
+                  "id": "NNVUB",
+                  "name": "mSubtitle",
+                  "fill": "$text-secondary",
+                  "content": "Join the conversation anonymously",
+                  "textAlign": "center",
+                  "fontFamily": "$font-main",
+                  "fontSize": 14
+                },
+                {
+                  "type": "frame",
+                  "id": "Y8BO4",
+                  "name": "mSp3",
+                  "width": 1,
+                  "height": 28
+                },
+                {
+                  "type": "frame",
+                  "id": "sgUP9",
+                  "name": "mInputGroup",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "T6D4P",
+                      "name": "mInputLabel",
+                      "fill": "$text-secondary",
+                      "content": "Callsign",
+                      "fontFamily": "$font-main",
+                      "fontSize": 13,
+                      "fontWeight": "600",
+                      "letterSpacing": 0.5
+                    },
+                    {
+                      "type": "frame",
+                      "id": "LZrJR",
+                      "name": "mInputField",
+                      "width": "fill_container",
+                      "height": 48,
+                      "fill": "$bg-input",
+                      "cornerRadius": "$radius-sm",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "$border"
+                      },
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "d8jdjA",
+                          "name": "mInputPlaceholder",
+                          "fill": "$text-muted",
+                          "content": "Enter your callsign...",
+                          "fontFamily": "$font-main",
+                          "fontSize": 15
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "zvJ43",
+                      "name": "mValidation",
+                      "fill": "$text-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Letters, numbers, and underscores only (max 20 chars)",
+                      "fontFamily": "$font-main",
+                      "fontSize": 11
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vBzY8",
+                  "name": "mSp4",
+                  "width": 1,
+                  "height": 20
+                },
+                {
+                  "type": "frame",
+                  "id": "Q4AZnY",
+                  "name": "mJoinBtn",
+                  "width": "fill_container",
+                  "height": 48,
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "$accent",
+                        "position": 0
+                      },
+                      {
+                        "color": "$accent-hover",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "cornerRadius": "$radius-sm",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#3B82F650",
+                    "offset": {
+                      "x": 0,
+                      "y": 2
+                    },
+                    "blur": 12
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "X2yUBg",
+                      "name": "mBtnText",
+                      "fill": "#FFFFFF",
+                      "content": "Join Chat",
+                      "fontFamily": "$font-main",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "QMN7l",
+                  "name": "mSp5",
+                  "width": 1,
+                  "height": 16
+                },
+                {
+                  "type": "frame",
+                  "id": "e8ACK0",
+                  "name": "mStatusRow",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "pAazt",
+                      "name": "mStatusDot",
+                      "fill": "$success",
+                      "width": 8,
+                      "height": 8
+                    },
+                    {
+                      "type": "text",
+                      "id": "CEtPV",
+                      "name": "mStatusText",
+                      "fill": "$text-muted",
+                      "content": "Connected",
+                      "fontFamily": "$font-main",
+                      "fontSize": 13
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "i9K9o",
+          "name": "mForm",
+          "width": "fill_container",
+          "fill": "$bg-secondary",
+          "cornerRadius": "$radius-lg",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            36,
+            24
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "b3FYrd",
+              "name": "mIconWrap",
+              "width": 64,
+              "height": 64,
+              "fill": "$accent",
+              "cornerRadius": "$radius-md",
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "W1gxq4",
+                  "name": "mIcon",
+                  "width": 32,
+                  "height": 32,
+                  "iconFontName": "message-circle",
+                  "iconFontFamily": "lucide",
+                  "fill": "#FFFFFF"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "PwiGS",
+              "name": "mTitleGroup",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "iNkV4",
+                  "name": "mTitle",
+                  "fill": "$text-primary",
+                  "content": "Anonymous Chat",
+                  "textAlign": "center",
+                  "fontFamily": "$font-main",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "nqXpi",
+                  "name": "mSubtitle",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Join the conversation anonymously",
+                  "textAlign": "center",
+                  "fontFamily": "$font-main",
+                  "fontSize": 14
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "vZeHn",
+              "name": "mInputGroup",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "NaJ1Z",
+                  "name": "mInputField",
+                  "width": "fill_container",
+                  "height": 48,
+                  "fill": "$bg-input",
+                  "cornerRadius": "$radius-sm",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "$border"
+                  },
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "R0IH3",
+                      "name": "mPlaceholder",
+                      "fill": "$text-muted",
+                      "content": "Enter your callsign...",
+                      "fontFamily": "$font-main",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "hosIK",
+                  "name": "mHint",
+                  "fill": "$text-muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Letters, numbers, and underscores only (max 20 chars)",
+                  "fontFamily": "$font-main",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "G2JrZP",
+              "name": "mJoinBtn",
+              "width": "fill_container",
+              "height": 48,
+              "fill": "$accent",
+              "cornerRadius": "$radius-sm",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Bo8To",
+                  "name": "mJoinLabel",
+                  "fill": "#FFFFFF",
+                  "content": "Join Chat",
+                  "fontFamily": "$font-main",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "nAin4",
+              "name": "mStatusRow",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "mqFJ1",
+                  "name": "mDot",
+                  "fill": "$success",
+                  "width": 8,
+                  "height": 8
+                },
+                {
+                  "type": "text",
+                  "id": "X9DUme",
+                  "name": "mStatusLabel",
+                  "fill": "$text-muted",
+                  "content": "Connected",
+                  "fontFamily": "$font-main",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "CuBqf",
+      "x": 0,
+      "y": 1000,
+      "name": "Desktop - Chat Screen",
+      "width": 1440,
+      "height": 900,
+      "fill": "$bg-primary",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "rj9ul",
+          "name": "Chat Wrapper",
+          "width": "fill_container",
+          "height": "fill_container",
+          "fill": "$bg-primary",
+          "layout": "vertical",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "MXNfG",
+              "name": "Header Bar",
+              "width": "fill_container",
+              "height": 64,
+              "fill": "$bg-secondary",
+              "stroke": {
+                "align": "inside",
+                "thickness": {
+                  "bottom": 1
+                },
+                "fill": "$border"
+              },
+              "padding": [
+                0,
+                32
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "qafqM",
+                  "name": "headerLeft",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "zOLSU",
+                      "name": "chatIcon",
+                      "width": 24,
+                      "height": 24,
+                      "iconFontName": "message-circle",
+                      "iconFontFamily": "lucide",
+                      "fill": "$accent"
+                    },
+                    {
+                      "type": "text",
+                      "id": "YZzyR",
+                      "name": "headerTitle",
+                      "fill": "$text-primary",
+                      "content": "Anonymous Chat",
+                      "fontFamily": "$font-main",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "qPrHv",
+                  "name": "headerRight",
+                  "gap": 16,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "m2SDg",
+                      "name": "statusDot",
+                      "fill": "$success",
+                      "width": 10,
+                      "height": 10
+                    },
+                    {
+                      "type": "text",
+                      "id": "VrMiu",
+                      "name": "statusText",
+                      "fill": "$success",
+                      "content": "Connected",
+                      "fontFamily": "$font-main",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "RHU9H",
+                      "name": "userCount",
+                      "gap": 6,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "yXcmC",
+                          "name": "usersIcon",
+                          "width": 16,
+                          "height": 16,
+                          "iconFontName": "users",
+                          "iconFontFamily": "lucide",
+                          "fill": "$text-secondary"
+                        },
+                        {
+                          "type": "text",
+                          "id": "p3GkG",
+                          "name": "usersText",
+                          "fill": "$text-secondary",
+                          "content": "4 online",
+                          "fontFamily": "$font-main",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "O7ZpO",
+              "name": "Message Area",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "padding": [
+                24,
+                0
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "eP1jE",
+                  "name": "Messages Container",
+                  "clip": true,
+                  "width": 800,
+                  "height": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "PjDMe",
+                      "name": "System Message",
+                      "width": "fill_container",
+                      "padding": [
+                        8,
+                        0
+                      ],
+                      "justifyContent": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "NXKSr",
+                          "name": "sys1Text",
+                          "fill": "$system-msg",
+                          "content": "NightOwl joined the chat",
+                          "fontFamily": "$font-main",
+                          "fontSize": 13,
+                          "fontWeight": "normal",
+                          "fontStyle": "italic"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "zGhjj",
+                      "name": "Other Message Row",
+                      "width": "fill_container",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Bo8i8",
+                          "name": "bubble1",
+                          "width": 380,
+                          "fill": "$msg-other-bg",
+                          "cornerRadius": [
+                            4,
+                            16,
+                            16,
+                            16
+                          ],
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "$border"
+                          },
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": [
+                            10,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "wnyug",
+                              "name": "b1Name",
+                              "fill": "$accent",
+                              "content": "NightOwl",
+                              "fontFamily": "$font-main",
+                              "fontSize": 12,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "a0xARE",
+                              "name": "b1Text",
+                              "fill": "$text-primary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Hey everyone! Just got here. What's the topic tonight?",
+                              "fontFamily": "$font-main",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "V4gdp",
+                              "name": "b1Time",
+                              "fill": "$text-muted",
+                              "content": "10:24 PM",
+                              "fontFamily": "$font-main",
+                              "fontSize": 11,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "qdW94",
+                      "name": "Other Message Row 2",
+                      "width": "fill_container",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "EVZV8",
+                          "name": "bubble2",
+                          "width": 400,
+                          "fill": "$msg-other-bg",
+                          "cornerRadius": [
+                            4,
+                            16,
+                            16,
+                            16
+                          ],
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "$border"
+                          },
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": [
+                            10,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "o88hgM",
+                              "name": "b2Name",
+                              "fill": "#A78BFA",
+                              "content": "Ghost42",
+                              "fontFamily": "$font-main",
+                              "fontSize": 12,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "w0KEp",
+                              "name": "b2Text",
+                              "fill": "$text-primary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Welcome! We're just chatting about random stuff. No rules here 😄",
+                              "fontFamily": "$font-main",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "qDMMW",
+                              "name": "b2Time",
+                              "fill": "$text-muted",
+                              "content": "10:25 PM",
+                              "fontFamily": "$font-main",
+                              "fontSize": 11,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "IZIPc",
+                      "name": "Own Message Row",
+                      "width": "fill_container",
+                      "justifyContent": "end",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "yQUTD",
+                          "name": "bubble3",
+                          "width": 370,
+                          "fill": "$msg-own-bg",
+                          "cornerRadius": [
+                            16,
+                            4,
+                            16,
+                            16
+                          ],
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": [
+                            10,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "bn5dT",
+                              "name": "b3Name",
+                              "fill": "#DBEAFE",
+                              "content": "You",
+                              "fontFamily": "$font-main",
+                              "fontSize": 12,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "TjD2H",
+                              "name": "b3Text",
+                              "fill": "$text-primary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Hey! Nice to meet you all. This chat is pretty cool 🚀",
+                              "fontFamily": "$font-main",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "ivqlu",
+                              "name": "b3Time",
+                              "fill": "#93C5FD",
+                              "content": "10:26 PM",
+                              "fontFamily": "$font-main",
+                              "fontSize": 11,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "KSjHO",
+                      "name": "Other Message Row 3",
+                      "width": "fill_container",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "dD9uJ",
+                          "name": "bubble4",
+                          "width": 400,
+                          "fill": "$msg-other-bg",
+                          "cornerRadius": [
+                            4,
+                            16,
+                            16,
+                            16
+                          ],
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "$border"
+                          },
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": [
+                            10,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "VLy9X",
+                              "name": "b4Name",
+                              "fill": "$accent",
+                              "content": "NightOwl",
+                              "fontFamily": "$font-main",
+                              "fontSize": 12,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "pEWnB",
+                              "name": "b4Text",
+                              "fill": "$text-primary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Right?! Totally anonymous, no sign up needed. Just pick a name and go.",
+                              "fontFamily": "$font-main",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "uhWeB",
+                              "name": "b4Time",
+                              "fill": "$text-muted",
+                              "content": "10:26 PM",
+                              "fontFamily": "$font-main",
+                              "fontSize": 11,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ewzdT",
+                      "name": "Own Message Row 2",
+                      "width": "fill_container",
+                      "justifyContent": "end",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "opCqL",
+                          "name": "bubble5",
+                          "width": 380,
+                          "fill": "$msg-own-bg",
+                          "cornerRadius": [
+                            16,
+                            4,
+                            16,
+                            16
+                          ],
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": [
+                            10,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "rTL4i",
+                              "name": "b5Name",
+                              "fill": "#DBEAFE",
+                              "content": "You",
+                              "fontFamily": "$font-main",
+                              "fontSize": 12,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "yo4ni",
+                              "name": "b5Text",
+                              "fill": "$text-primary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Yeah, love the simplicity. No accounts, no tracking. Just vibes ✌️",
+                              "fontFamily": "$font-main",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "AVn8J",
+                              "name": "b5Time",
+                              "fill": "#93C5FD",
+                              "content": "10:27 PM",
+                              "fontFamily": "$font-main",
+                              "fontSize": 11,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "P5e1SB",
+                      "name": "System Message 2",
+                      "width": "fill_container",
+                      "padding": [
+                        8,
+                        0
+                      ],
+                      "justifyContent": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "s5e6i3",
+                          "name": "sys2Text",
+                          "fill": "$system-msg",
+                          "content": "CyberPunk_99 joined the chat",
+                          "fontFamily": "$font-main",
+                          "fontSize": 13,
+                          "fontWeight": "normal",
+                          "fontStyle": "italic"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "P2hOW",
+              "name": "Input Bar",
+              "width": "fill_container",
+              "fill": "$bg-secondary",
+              "stroke": {
+                "align": "inside",
+                "thickness": {
+                  "top": 1
+                },
+                "fill": "$border"
+              },
+              "padding": [
+                16,
+                32
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "JtN0F",
+                  "name": "inputInner",
+                  "width": 800,
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "CR8zk",
+                      "name": "inputField",
+                      "width": "fill_container",
+                      "height": 48,
+                      "fill": "$bg-input",
+                      "cornerRadius": "$radius-md",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "$border"
+                      },
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dS8KE",
+                          "name": "inputText",
+                          "fill": "$text-muted",
+                          "content": "Type a message...",
+                          "fontFamily": "$font-main",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Zekwz",
+                      "name": "sendBtn",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "$accent",
+                      "cornerRadius": "$radius-md",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "hhH7A",
+                          "name": "sendIcon",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "send",
+                          "iconFontFamily": "lucide",
+                          "fill": "$text-primary"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "VmZy9",
+      "x": 1540,
+      "y": 1000,
+      "name": "Mobile - Chat Screen",
+      "width": 390,
+      "height": 844,
+      "fill": "$bg-primary",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "RGIfj",
+          "name": "Status Bar",
+          "width": "fill_container",
+          "height": 54,
+          "fill": "$bg-primary",
+          "padding": [
+            0,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "kmKpA",
+              "name": "mTime",
+              "fill": "$text-primary",
+              "content": "10:27",
+              "fontFamily": "$font-main",
+              "fontSize": 15,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "aqUjU",
+              "name": "mStatusRight",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "hQWEJ",
+                  "name": "mSignal",
+                  "width": 16,
+                  "height": 16,
+                  "iconFontName": "signal",
+                  "iconFontFamily": "lucide",
+                  "fill": "$text-primary"
+                },
+                {
+                  "type": "icon_font",
+                  "id": "wZwXI",
+                  "name": "mWifi",
+                  "width": 16,
+                  "height": 16,
+                  "iconFontName": "wifi",
+                  "iconFontFamily": "lucide",
+                  "fill": "$text-primary"
+                },
+                {
+                  "type": "icon_font",
+                  "id": "y9ggdA",
+                  "name": "mBattery",
+                  "width": 16,
+                  "height": 16,
+                  "iconFontName": "battery-full",
+                  "iconFontFamily": "lucide",
+                  "fill": "$text-primary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "kPqvu",
+          "name": "Mobile Header",
+          "width": "fill_container",
+          "height": 56,
+          "fill": "$bg-secondary",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "$border"
+          },
+          "padding": [
+            0,
+            16
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "C7pTkQ",
+              "name": "mHeaderLeft",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "hk021",
+                  "name": "mBackIcon",
+                  "width": 24,
+                  "height": 24,
+                  "iconFontName": "chevron-left",
+                  "iconFontFamily": "lucide",
+                  "fill": "$text-primary"
+                },
+                {
+                  "type": "icon_font",
+                  "id": "ZybkO",
+                  "name": "mChatIcon",
+                  "width": 20,
+                  "height": 20,
+                  "iconFontName": "message-circle",
+                  "iconFontFamily": "lucide",
+                  "fill": "$accent"
+                },
+                {
+                  "type": "text",
+                  "id": "wZx7X",
+                  "name": "mHeaderTitle",
+                  "fill": "$text-primary",
+                  "content": "Anonymous Chat",
+                  "fontFamily": "$font-main",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Q1Rjg",
+              "name": "mHeaderRight",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "LQvSV",
+                  "name": "mStatusDot",
+                  "fill": "$success",
+                  "width": 8,
+                  "height": 8
+                },
+                {
+                  "type": "text",
+                  "id": "u6DEX",
+                  "name": "mOnlineText",
+                  "fill": "$text-secondary",
+                  "content": "4",
+                  "fontFamily": "$font-main",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "icon_font",
+                  "id": "CYdip",
+                  "name": "mUsersSmall",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "users",
+                  "iconFontFamily": "lucide",
+                  "fill": "$text-secondary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "n7dMz3",
+          "name": "Mobile Messages",
+          "clip": true,
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 6,
+          "padding": [
+            16,
+            12
+          ],
+          "justifyContent": "end",
+          "children": [
+            {
+              "type": "frame",
+              "id": "sT6Z6",
+              "name": "mSys1",
+              "width": "fill_container",
+              "padding": [
+                6,
+                0
+              ],
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "SHT78",
+                  "name": "mSys1Text",
+                  "fill": "$system-msg",
+                  "content": "NightOwl joined the chat",
+                  "fontFamily": "$font-main",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "fontStyle": "italic"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "uXbrW",
+              "name": "mRow1",
+              "width": "fill_container",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ncUzc",
+                  "name": "mBubble1",
+                  "width": 260,
+                  "fill": "$msg-other-bg",
+                  "cornerRadius": [
+                    4,
+                    14,
+                    14,
+                    14
+                  ],
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "$border"
+                  },
+                  "layout": "vertical",
+                  "gap": 3,
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "tecFh",
+                      "name": "mB1Name",
+                      "fill": "$accent",
+                      "content": "NightOwl",
+                      "fontFamily": "$font-main",
+                      "fontSize": 11,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "r11TjW",
+                      "name": "mB1Text",
+                      "fill": "$text-primary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Hey everyone! Just got here. What's the topic tonight?",
+                      "fontFamily": "$font-main",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "m7h9G",
+                      "name": "mB1Time",
+                      "fill": "$text-muted",
+                      "content": "10:24 PM",
+                      "fontFamily": "$font-main",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "nxFkw",
+              "name": "mRow2",
+              "width": "fill_container",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "lwNyy",
+                  "name": "mBubble2",
+                  "width": 280,
+                  "fill": "$msg-other-bg",
+                  "cornerRadius": [
+                    4,
+                    14,
+                    14,
+                    14
+                  ],
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "$border"
+                  },
+                  "layout": "vertical",
+                  "gap": 3,
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "LyH57",
+                      "name": "mB2Name",
+                      "fill": "#A78BFA",
+                      "content": "Ghost42",
+                      "fontFamily": "$font-main",
+                      "fontSize": 11,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "SN1yb",
+                      "name": "mB2Text",
+                      "fill": "$text-primary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Welcome! We're just chatting about random stuff. No rules here 😄",
+                      "fontFamily": "$font-main",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Q0QCDq",
+                      "name": "mB2Time",
+                      "fill": "$text-muted",
+                      "content": "10:25 PM",
+                      "fontFamily": "$font-main",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "wFuUz",
+              "name": "mRow3",
+              "width": "fill_container",
+              "justifyContent": "end",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "TfZUu",
+                  "name": "mBubble3",
+                  "width": 260,
+                  "fill": "$msg-own-bg",
+                  "cornerRadius": [
+                    14,
+                    4,
+                    14,
+                    14
+                  ],
+                  "layout": "vertical",
+                  "gap": 3,
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "BgR7i",
+                      "name": "mB3Name",
+                      "fill": "#DBEAFE",
+                      "content": "You",
+                      "fontFamily": "$font-main",
+                      "fontSize": 11,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yxlW8",
+                      "name": "mB3Text",
+                      "fill": "$text-primary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Hey! Nice to meet you all. This chat is pretty cool 🚀",
+                      "fontFamily": "$font-main",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "viMZY",
+                      "name": "mB3Time",
+                      "fill": "#93C5FD",
+                      "content": "10:26 PM",
+                      "fontFamily": "$font-main",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "pRasV",
+              "name": "mRow4",
+              "width": "fill_container",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "W6CSe",
+                  "name": "mBubble4",
+                  "width": 280,
+                  "fill": "$msg-other-bg",
+                  "cornerRadius": [
+                    4,
+                    14,
+                    14,
+                    14
+                  ],
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "$border"
+                  },
+                  "layout": "vertical",
+                  "gap": 3,
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "RCrnG",
+                      "name": "mB4Name",
+                      "fill": "$accent",
+                      "content": "NightOwl",
+                      "fontFamily": "$font-main",
+                      "fontSize": 11,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Ctx2H",
+                      "name": "mB4Text",
+                      "fill": "$text-primary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Right?! Totally anonymous, no sign up needed. Just pick a name and go.",
+                      "fontFamily": "$font-main",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "IxmuJ",
+                      "name": "mB4Time",
+                      "fill": "$text-muted",
+                      "content": "10:26 PM",
+                      "fontFamily": "$font-main",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "BmaUU",
+              "name": "mRow5",
+              "width": "fill_container",
+              "justifyContent": "end",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "eTh7i",
+                  "name": "mBubble5",
+                  "width": 260,
+                  "fill": "$msg-own-bg",
+                  "cornerRadius": [
+                    14,
+                    4,
+                    14,
+                    14
+                  ],
+                  "layout": "vertical",
+                  "gap": 3,
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "X0URr3",
+                      "name": "mB5Name",
+                      "fill": "#DBEAFE",
+                      "content": "You",
+                      "fontFamily": "$font-main",
+                      "fontSize": 11,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "b6TqjJ",
+                      "name": "mB5Text",
+                      "fill": "$text-primary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Yeah, love the simplicity. No accounts, no tracking. Just vibes ✌️",
+                      "fontFamily": "$font-main",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "j9LCR",
+                      "name": "mB5Time",
+                      "fill": "#93C5FD",
+                      "content": "10:27 PM",
+                      "fontFamily": "$font-main",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "I5yDb6",
+              "name": "mSys2",
+              "width": "fill_container",
+              "padding": [
+                6,
+                0
+              ],
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ROMDN",
+                  "name": "mSys2Text",
+                  "fill": "$system-msg",
+                  "content": "CyberPunk_99 joined the chat",
+                  "fontFamily": "$font-main",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "fontStyle": "italic"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "s7FVz",
+          "name": "Mobile Input Bar",
+          "width": "fill_container",
+          "fill": "$bg-secondary",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "top": 1
+            },
+            "fill": "$border"
+          },
+          "gap": 10,
+          "padding": [
+            12,
+            12,
+            28,
+            12
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "ptMsF",
+              "name": "mInputField",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "$bg-input",
+              "cornerRadius": "$radius-full",
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "$border"
+              },
+              "padding": [
+                0,
+                14
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "B41Whe",
+                  "name": "mInputText",
+                  "fill": "$text-muted",
+                  "content": "Type a message...",
+                  "fontFamily": "$font-main",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Rzeq4",
+              "name": "mSendBtn",
+              "width": 44,
+              "height": 44,
+              "fill": "$accent",
+              "cornerRadius": "$radius-full",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "Rm966",
+                  "name": "mSendIcon",
+                  "width": 18,
+                  "height": 18,
+                  "iconFontName": "send",
+                  "iconFontFamily": "lucide",
+                  "fill": "$text-primary"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "accent": {
+      "type": "color",
+      "value": "#3B82F6"
+    },
+    "accent-hover": {
+      "type": "color",
+      "value": "#2563EB"
+    },
+    "bg-input": {
+      "type": "color",
+      "value": "#1E293B"
+    },
+    "bg-primary": {
+      "type": "color",
+      "value": "#0F172A"
+    },
+    "bg-secondary": {
+      "type": "color",
+      "value": "#1E293B"
+    },
+    "bg-tertiary": {
+      "type": "color",
+      "value": "#334155"
+    },
+    "border": {
+      "type": "color",
+      "value": "#334155"
+    },
+    "error": {
+      "type": "color",
+      "value": "#EF4444"
+    },
+    "font-main": {
+      "type": "string",
+      "value": "Inter"
+    },
+    "font-mono": {
+      "type": "string",
+      "value": "JetBrains Mono"
+    },
+    "msg-other-bg": {
+      "type": "color",
+      "value": "#1E293B"
+    },
+    "msg-own-bg": {
+      "type": "color",
+      "value": "#3B82F6"
+    },
+    "radius-full": {
+      "type": "number",
+      "value": 9999
+    },
+    "radius-lg": {
+      "type": "number",
+      "value": 16
+    },
+    "radius-md": {
+      "type": "number",
+      "value": 12
+    },
+    "radius-sm": {
+      "type": "number",
+      "value": 8
+    },
+    "success": {
+      "type": "color",
+      "value": "#22C55E"
+    },
+    "system-msg": {
+      "type": "color",
+      "value": "#64748B"
+    },
+    "text-muted": {
+      "type": "color",
+      "value": "#64748B"
+    },
+    "text-primary": {
+      "type": "color",
+      "value": "#F8FAFC"
+    },
+    "text-secondary": {
+      "type": "color",
+      "value": "#94A3B8"
+    },
+    "warning": {
+      "type": "color",
+      "value": "#F59E0B"
+    }
+  }
+}
