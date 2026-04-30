@@ -24,9 +24,10 @@ jobs:
         run: cd project_2/webui && npm ci
 
       - name: Build
+        # VITE_WS_ENDPOINT is baked into .env.production; secret overrides it if set
         run: cd project_2/webui && npm run build
         env:
-          VITE_WS_ENDPOINT: ${{ secrets.VITE_WS_ENDPOINT }}
+          VITE_WS_ENDPOINT: ${{ secrets.VITE_WS_ENDPOINT || 'wss://hyupn8hi52.execute-api.us-west-2.amazonaws.com/prod' }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
